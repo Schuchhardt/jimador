@@ -1,0 +1,8 @@
+.DS_Store
+build
+bower_components
+node_modules
+*.psd
+Sitio_PSD
+videos_mp4_webm
+app/images/experiencias

@@ -1,0 +1,11 @@
+export default angular.module('ElJimador.controllers', [])
+    .controller('LoginCtrl', require('./modules/login/login'))
+    .controller('HomeCtrl', require('./modules/home/home'))
+    .controller('RedescubreCtrl', require('./modules/home/redescubre'))
+    .controller('PreparationVideoCtrl', require('./modules/home/preparation-video'))
+    .controller('AgendaCtrl', require('./modules/home/agenda'))
+    .controller('ExperienciasCtrl', require('./modules/home/experiencias'))
+    .controller('VideoCtrl', require('./modules/home/video'))
+    .controller('sliderPhotosCtrl', require('./modules/home/slider-photos'))
+    .controller('PolicyCtrl', require('./modules/lp/policy'))
+    ;

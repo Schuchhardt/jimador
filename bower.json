@@ -1,0 +1,29 @@
+{
+  "name": "el-jimador",
+  "description": "El Jimador",
+  "main": "index.js",
+  "authors": [
+    "Sebastian Sch."
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.4",
+    "ngSweetAlert": "angular-sweetalert#^1.1.0",
+    "angular-parallax": "^0.0.2",
+    "angular-touch": "^1.5.0",
+    "angular-carousel": "^1.0.1",
+    "angular-scroll": "^1.0.0",
+    "angular-audio": "^1.7.1",
+    "videogular-buffering": "^1.4.3",
+    "angulartics-google-analytics": "^0.1.4"
+  }
+}

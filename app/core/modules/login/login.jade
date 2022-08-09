@@ -1,0 +1,79 @@
+div.container(id="Login")
+	.row
+		.col.col-md-5
+			.redescubre-logo
+		.col.col-md-2
+			.logo
+				img(src="images/logo_jimador_nuevo.png")
+		.col.col-md-5
+			a.fb-link( href="https://www.facebook.com/elJimadorChile" target="_system")
+				.fb-logo
+	.row
+		.col.col-md-offset-8.col-md-4.col-sm-offset-6.col-sm-6.right-side.col-xs-12.col-xs-offset-0
+			.row.padding-top(ng-if="isUnderAge")
+				p.white No puedes <span> Ingresar </span> al Sitio.
+				img.img-error(src="images/error.png")
+			form(name="ageGateForm" ng-submit="checkAge(ageGate, remindUser)" novalidate ng-if="!isUnderAge")
+				.row.padding-top
+					p.white Para ingresar <span>necesitamos</span> tu fecha de nacimiento
+				.row
+					.dates.visible-xs-12.native-dp.hidden-sm.hidden-md.hidden-lg
+						label
+							span.savior DD-MM-AAAA
+							input(type="date" ng-model="ageGate.date" name="birthDate" placeholder="DD-MM-AAAA")
+					.dates.col.col-lg-12.col-md-12.col-sm-12.hidden-xs
+						.input-group.date-age
+							input.form-control(type="text" placeholder="DD" ng-model="ageGate.day" ng-minlength="1" ng-maxlength="2" required custom-validation maxv="31" minv="1")
+							span.date-text Día
+						.divider.ng-cloak
+							span /
+						.input-group.date-age
+							input.form-control(type="text" placeholder="MM" ng-model="ageGate.month" ng-minlength="1" ng-maxlength="2" required custom-validation maxv="12" minv="1")
+							span.date-text Mes
+						.divider.ng-cloak
+							span /
+						.input-group.date-age
+							input.form-control.year(type="text" placeholder="AAAA" ng-model="ageGate.year" ng-minlength="4" ng-maxlength="4" required custom-validation maxv="2015" minv="1")
+							span.date-text Año
+				.row
+					.col.country-select
+						span.white.chinese.select-title Seleccionar
+						label
+							span.chinese.white.select-label  País
+							ui-select( ng-model="currentCountry" required)
+								ui-select-match(placeholder="Seleccione Pais...") {{$select.selected.name}}
+								ui-select-choices(repeat="country.iso as country in countries | filter: $select.search")
+									span(ng-bind-html="country.name | highlight: $select.search")
+							//- select(ng-model="currentCountry" ng-options="country.iso as country.name for country in countries" required)
+				.row.btn-row
+					.col.col-lg-12.col-md-12.col-sm-12.col-xs-12.trans-msg.cookie-text
+						.checkbox
+							label.white.chinese
+								div.remind-user							
+									input(type="checkbox" ng-model="ageGate.remindUser") 
+									span.remind Recordar Datos
+								span.book.small Este sitio utiliza <a target="_system" href="http://www.brown-forman.com/cookiepolicy/spain.html">cookies</a>, estoy de acuerdo con las <a target="_system" href="http://legal.b-f.com/content/cl-ej-terms-use">condiciones de uso</a> y <a target="_system" href=" http://legal.b-f.com/content/cl-ej-privacy-policy">politica de privacidad</a>
+								span.disclaimer.book.hidden-xs No hagas check si usas un computador compartido
+								span.disclaimer.book.hidden-sm.hidden-md.hidden-lg No hagas check si usas un dispositivo compartido
+						button.hidden-xs.btn.btn-ingresar(type="submit" ng-disabled="ageGateForm.$invalid") Ingresar
+						button.hidden-sm.hidden-md.hidden-lg.btn.btn-ingresar(type="submit" ng-disabled="ageGateForm.birthDate.$pristine || ageGateForm.birthDate.$invalid") Ingresar
+		.col.col-lg-6.col-lg-offset-6.col-md-8.col-md-offset-4.col-sm-12.col-sm-offset-0.col-xs-12.col-xs-offset-0.footer-lgl.trans-msg
+			.row
+				.col.col-xs-12.col-sm-4.col-md-3.col-lg-3
+					p.margin-0.white.book.uppercased.copyright <strong> El Jimador </strong> is a registered trademark. &copy; 2016 Brown-forman. All Rights Reserved.
+					img.hidden-xs.rayo(src="images/rayo.png")
+				.col.col-xs-12.col-sm-7.col-sm-offset-1.col-md-9.col-md-offset-0.col-lg-9.informate
+					p.text-center.white.book.uppercased.enjoy-phrase.margin-0 disfruta responsablemente
+					p.white.book.uppercased.font-70.margin-0.text-center
+						span.text-left
+							a(target="_system" href="http://legal.b-f.com/content/cl-ej-terms-use") Condiciones de Uso
+						span.text-center
+							a(target="_system" href=" http://legal.b-f.com/content/cl-ej-privacy-policy") Politicas de Privacidad
+						span.text-right
+							a(ui-sref="politica-de-vinculacion") Politica de Vinculación
+					p.font-80.margin-0.white.book.uppercased.text-center Para saber más sobre un consumo responsable, visita <a href="http://alcoholinformate.org.mx"> alcoholinformate.org.mx</a>
+					p.font-80.margin-0.white.book.uppercased.text-center Si estás interesado en nuestro punto de vista sobre temas relacionados con el alcohol, visita 
+						a(href="http://ourthinkingaboutdrinking.com" target="_system") ourthinkingaboutdrinking.com
+
+
+

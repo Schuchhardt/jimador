@@ -1,0 +1,37 @@
+extends ./home-layout
+block content
+	.container(id="home")
+		.row.tragos-slider
+			.col-xs-12.visible-xs-12.hidden-sm.hidden-md.hidden-lg
+				ul(rn-carousel class="image" rn-carousel-controls rn-carousel-index="currentSlide" rn-carousel-controls-allow-loop)
+					//- rn-carousel-transition="hexagon"
+					li(ng-repeat="slide in slides")
+						img.slider-img(ng-src="images/home/{{slide.name}}.png" ng-click="playVideo(slide)")
+		#video.row.videogular-container.hidden-sm.hidden-md.hidden-lg
+			videogular( vg-theme="currentVideo.theme.url" vg-player-ready="onPlayerReady($API)" ng-show="playingVideo")
+				vg-media(vg-src="currentVideo.sources")
+				vg-controls
+					vg-play-pause-button
+					vg-scrub-bar
+						vg-scrub-bar-current-time
+					vg-time-display {{ timeLeft | date:'mm:ss' }}
+					vg-volume
+						vg-mute-button
+						vg-volume-bar
+					vg-fullscreen-button
+				vg-buffering
+		.row.hidden-xs
+			.col-md-4.col-lg-4.col-sm-6.col-xs-6
+				.row
+					img.left(parallax parallax-horizontal-offset="0" parallax-ratio="0.1" src="images/home/submarino.png" ng-click="playPreparation('submarino')")
+				.row
+					img(parallax parallax-horizontal-offset="0" parallax-ratio="0.1" src="images/home/paloma.png" ng-click="playPreparation('paloma')")
+			.col-md-4.col-lg-4.hidden-sm.hidden-xs
+			.col-md-4.col-lg-4.col-sm-6.col-xs-6
+				.row
+					img.right(parallax parallax-horizontal-offset="0" parallax-ratio="0.1" src="images/home/guadalupe.png" ng-click="playPreparation('guadalupe')")
+				.row
+					img(parallax parallax-horizontal-offset="0" parallax-ratio="0.1" src="images/home/marchelita.png" ng-click="playPreparation('marchelita')")
+	.row
+		script(type="text/ng-template", id="preparationVideo")
+			include ./preparation-video

@@ -1,0 +1,9 @@
+//- .row#sliderPhotos
+.container(id="sliderPhotos")
+	.row.photo-slider
+		button.pull-right.close(ng-click="close()") x
+		.col-md-12.col-lg-12
+			ul(rn-carousel class="image" rn-carousel-controls rn-carousel-index="currentSlide" rn-carousel-controls-allow-loop)
+				li(ng-repeat="img in experiencia.imagenes" )
+					div.slider-img(ng-style="getBg(img)")
+					//img.slider-img(ng-src="images/experiencias/{{experiencia.slug}}/{{img}}.jpg")

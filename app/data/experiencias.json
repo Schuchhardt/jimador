@@ -1,0 +1,118 @@
+{
+	"experiencias": [
+		{
+			"slug": "nikitta-12-marzo",
+			"index": 0,
+			"hasVideo": true,
+			"titulo1": "Nikitta",
+			"titulo2": "Casa Piedra",
+			"titulo3": "Nikitta Casa Piedra 14 Enero",
+			"nombre": "Nikitta Casa Piedra",
+			"texto2": "Una noche más en que Redescubrimos el carrete y los amigos. Con degustación de shots invitamos a Redescubrir el Tequila. El Jimador, 100% agave. ",
+			"texto3": "Invitamos a redescubrir el arte, la música y el estilo con tequila El Jimador. ",
+			"fecha": {
+				"dd": "12",
+				"mm": "03",
+				"yy": "16",
+				"mes": "Mar"
+			},
+			"portadas":["85", "95", "65", "15", "25", "16"],
+			"imagenes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "75", "76", "77", "78", "79", "80", "81", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "99", "100"]
+		},
+		{
+			"slug": "one-3-marzo",
+			"index": 1,
+			"hasVideo": true,
+			"titulo1": "Noches",
+			"titulo2": "One",
+			"titulo3": "Noches One 3 Marzo",
+			"nombre": "Noches One",
+			"texto2": "Una noche más en que Redescubrimos el carrete y los amigos. Con degustación de shots invitamos a Redescubrir el Tequila. El Jimador, 100% agave. ",
+			"texto3": "Invitamos a redescubrir el arte, la música y el estilo con tequila El Jimador. ",
+			"fecha": {
+				"dd": "03",
+				"mm": "03",
+				"yy": "16",
+				"mes": "Mar"
+			},
+			"portadas":["1", "1", "1", "1"],
+			"imagenes": ["1", "1", "1", "1"]
+		},
+		{
+			"slug": "one-28-enero",
+			"index": 2,
+			"titulo1": "Noches",
+			"titulo2": "One",
+			"titulo3": "Noches One 14 Enero",
+			"nombre": "Noches One",
+			"texto2": "Una noche más en que Redescubrimos el carrete y los amigos. Con degustación de shots invitamos a Redescubrir el Tequila. El Jimador, 100% agave. ",
+			"texto3": "Invitamos a redescubrir el arte, la música y el estilo con tequila El Jimador. ",
+			"fecha": {
+				"dd": "14",
+				"mm": "01",
+				"yy": "16",
+				"mes": "Ene"
+			},
+			"portadas":["1", "2", "5", "6", "10"],
+			"imagenes": ["1", "2", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"]
+		},
+		{
+			"slug": "one-14-enero",
+			"index": 3,
+			"titulo1": "Noches",
+			"titulo2": "One",
+			"titulo3": "Noches One 14 Enero",
+			"nombre": "Noches One 14 Enero 2016",
+			"texto1": "Noches One",
+			"texto2": "Una noche más en que Redescubrimos el carrete y los amigos. Con degustación de shots invitamos a Redescubrir el Tequila. El Jimador, 100% agave. ",
+			"texto3": "Invitamos a redescubrir el arte, la música y el estilo con tequila El Jimador. ",
+			"fecha": {
+				"dd": "04",
+				"mm": "01",
+				"yy": "16",
+				"mes": "Ene"
+			},
+			"portadas":["1", "9", "5", "6", "2"],
+			"imagenes": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
+		},
+		{
+			"slug": "nikitta-7-enero",
+			"index": 4,
+			"titulo1": "Nikitta",
+			"titulo2": "Parque",
+			"titulo3": "Centro Parque",
+			"nombre": "Nikkita Centro Parque 2016",
+			"texto1": "Nikkita Centro Parque",
+			"texto2": "Una noche más en que Redescubrimos el carrete y los amigos. Con degustación de shots invitamos a Redescubrir el Tequila. El Jimador, 100% agave. ",
+			"texto3": "Invitamos a redescubrir el arte, la música y el estilo con tequila El Jimador. ",
+			"fecha": {
+				"dd": "07",
+				"mm": "01",
+				"yy": "16",
+				"mes": "Ene"
+			},
+			"portadas":["1", "9", "5", "6", "2"],
+			"imagenes": ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+		},
+		{
+			"slug": "nikitta-28-noviembre",
+			"index": 5,
+			"titulo1": "Nikitta",
+			"hasVideo": true,
+			"titulo2": "Hotel W",
+			"titulo3": "2015",
+			"nombre": "Nikkita Cierre de Temporada 2015",
+			"texto1": "Hotel W Santiago",
+			"texto2": "Una noche más en que Redescubrimos el carrete y los amigos. Con degustación de shots invitamos a Redescubrir el Tequila. El Jimador, 100% agave. ",
+			"texto3": "Invitamos a redescubrir el arte, la música y el estilo con tequila El Jimador. ",
+			"fecha": {
+				"dd": "28",
+				"mm": "11",
+				"yy": "15",
+				"mes": "Nov"
+			},
+			"portadas":["7", "1", "4", "6", "8"],
+			"imagenes": ["1", "2", "3", "4", "5", "6", "7", "8"]
+		}
+	]
+}

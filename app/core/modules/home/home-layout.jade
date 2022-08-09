@@ -1,0 +1,72 @@
+div(id="layout" ng-init="showNavbar = false")
+	#bar-header.row.header-bar.navbar-fixed-top
+		.col.col-lg-4.col-md-4.col-xs-4
+			.redescubre-logo(ui-sref="home")
+		.col.col-lg-4.col-md-4.col-xs-4
+			.logo(ui-sref="home")
+				img(src="images/logo_jimador_nuevo.png")
+		.col.col-lg-4.col-md-4.col-xs-4
+			a.hidden-xs.fb-link( href="https://www.facebook.com/elJimadorChile" target="_system")
+				.fb-logo
+			button.menu-logo.hidden-sm.hidden-md.hidden-lg(ng-click="showNavbar = !showNavbar")
+	nav.navbar.navbar-fixed-top.appear(ng-show="showNavbar").hidden-sm.hidden-md.hidden-lg
+		.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+			ul.nav.navbar-nav
+				li(ui-sref-active="active")
+					a(ui-sref="home") Home
+				li(ui-sref-active="active")
+					a(ui-sref="historia") Historia
+				li(ui-sref-active="active")
+					a(ui-sref="el-jimador") El Jimador
+				li(ui-sref-active="active")
+					a(ui-sref="redescubre") Redescubre
+				li(ui-sref-active="active")
+					a(ui-sref="experiencias") Experiencias
+	nav.navbar.navbar-fixed-top.appear.hidden-xs.absolute
+		.col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2
+			ul.nav.navbar-nav
+				li(ui-sref-active="active")
+					a(ui-sref="home-video") Home
+				li(ui-sref-active="active")
+					a(ui-sref="historia") Historia
+				li(ui-sref-active="active")
+					a(ui-sref="el-jimador") El Jimador
+				li(ui-sref-active="active")
+					a(ui-sref="redescubre") Redescubre
+				li(ui-sref-active="active")
+					a(ui-sref="experiencias") Experiencias
+	.container-content
+		block content
+		.footer(class="{{$parent.currentState}}-page")
+			.row.trans-msg.footer-legal-sm
+				.col.col-xs-12.col-sm-4.col-md-3.col-lg-3
+					p.margin-0.white.book.uppercased.copyright <strong> El Jimador </strong> is a registered trademark. &copy; 2016 Brown-forman. All Rights Reserved.
+					img.hidden-xs.rayo(src="images/rayo.png")
+				.col.col-xs-12.col-sm-7.col-sm-offset-1.col-md-6.col-md-offset-0.col-lg-6.informate
+					p.text-center.white.book.uppercased.enjoy-phrase.margin-0 disfruta responsablemente
+					p.white.book.uppercased.font-80.margin-0.text-center
+						span.text-left
+							a(target="_system" href="http://legal.b-f.com/content/cl-ej-terms-use") Condiciones de Uso
+						span.text-center
+							a(target="_system" href=" http://legal.b-f.com/content/cl-ej-privacy-policy") Politicas de Privacidad
+						span.text-right
+							a(ui-sref="politica-de-vinculacion") Politica de Vinculación
+					p.font-90.margin-0.white.book.uppercased.text-center Para saber más sobre un consumo responsable, visita <a href="http://alcoholinformate.org.mx"> alcoholinformate.org.mx</a>
+					p.font-90.margin-0.white.book.uppercased.text-center Si estás interesado en nuestro punto de vista sobre temas relacionados con el alcohol, visita 
+						a(href="http://ourthinkingaboutdrinking.com" target="_system") ourthinkingaboutdrinking.com
+			.row.trans-msg.footer-legal-xs.hidden-sm.hidden-md.hidden-lg
+				.col.col-xs-12.col-sm-4.col-md-3.col-lg-3
+					p.margin-0.white.book.uppercased.copyright <strong> El Jimador </strong> is a registered trademark. &copy; 2016 Brown-forman. All Rights Reserved.
+					img.hidden-xs.rayo(src="images/rayo.png")
+				.col.col-xs-12.col-sm-7.col-sm-offset-1.col-md-9.col-md-offset-0.col-lg-9.informate
+					p.text-center.white.book.uppercased.enjoy-phrase.margin-0 disfruta responsablemente
+					p.white.book.uppercased.font-70.margin-0
+						span.text-left
+							a(target="_system" href="http://legal.b-f.com/content/cl-ej-terms-use") Condiciones de Uso
+						span.text-center
+							a(target="_system" href=" http://legal.b-f.com/content/cl-ej-privacy-policy") Politicas de Privacidad
+						span.text-right
+							a(ui-sref="politica-de-vinculacion") Politica de Vinculación
+					p.font-80.margin-0.white.book.uppercased Para saber más sobre un consumo responsable, visita <a href="http://alcoholinformate.org.mx"> alcoholinformate.org.mx</a>
+					p.font-80.margin-0.white.book.uppercased Si estás interesado en nuestro punto de vista sobre temas relacionados con el alcohol, visita 
+						a(href="http://ourthinkingaboutdrinking.com" target="_system") ourthinkingaboutdrinking.com

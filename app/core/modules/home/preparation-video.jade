@@ -1,0 +1,13 @@
+.row.videogular-container
+	videogular(vg-auto-play="true" vg-theme="currentVideo.theme.url")
+		vg-media(vg-src="currentVideo.sources")
+		vg-controls
+			vg-play-pause-button
+			vg-scrub-bar
+				vg-scrub-bar-current-time
+			vg-time-display {{ timeLeft | date:'mm:ss' }}
+			vg-volume
+				vg-mute-button
+				vg-volume-bar
+			vg-fullscreen-button
+		vg-buffering

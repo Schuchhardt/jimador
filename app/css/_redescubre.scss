@@ -1,0 +1,67 @@
+#redescubre {
+    width: 100%;
+    position: relative;
+    padding: 50px 10px;
+    top: 50px;
+    @media(min-width: $iphone){
+        top: 10px;
+        padding: 10px 10px
+    }
+    img{
+        width: 100%;
+        display: block;
+        margin: auto;
+        @media(min-width: $xl-screen){
+            width: 80%
+        }
+    }
+    .divider img{
+        max-width: 100px;
+    }
+    .tragos{
+        @media(min-width: $iphone){
+            padding: 10px 25px;
+            img{
+                margin-top: 20px;
+            }
+        }
+        @media(min-width: $tablet){
+            padding: 10px 150px;
+        }
+    }
+}
+
+.title-text{
+    position: relative;
+    bottom: 95px;
+    font-size: 12px;
+    padding: 0px 70px;
+    padding-left: 15%;
+    @media(min-width: $lg-screen){
+        padding-left: 20%;
+    }
+    @media(min-width: $iphone){
+        margin-top: 40px;
+    }
+    @media(min-width: $tablet){
+        margin-top: inherit;
+    }
+}
+
+h3.phrase{
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    bottom: 99px;
+    left: 0px;
+}
+
+.margin-left-40{
+    margin-left: 40px;
+}
+
+p.phrase{
+    position: relative;
+    bottom: 70px;
+    right: 20px;
+}

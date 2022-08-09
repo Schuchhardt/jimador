@@ -1,0 +1,52 @@
+extends ./home-layout
+block content
+	div(id="video")
+		.row.videogular-container
+			
+			videogular(vg-player-ready="onPlayerReady($API)" vg-theme="config.theme.url" vg-complete="putReposoVideo()" vg-auto-play="true" vg-loop="loopVideos")
+				vg-media(vg-src="config.sources")
+				vg-poster(vg-url='config.plugins.poster' ng-if="showPoster")
+				vg-buffering
+			.row
+				.tour(ng-hide="ingredientesSeleccionados.length > 0")
+					p.chinese Selecciona y mezcla los ingredientes para preparar tu trago
+					img(src="../images/redescubre-video/scroll-blanco.png")
+			.sidebar-ingredientes(ng-show="ingredientesSeleccionados.length > 0")
+				h1.mar.chasing-embers tus
+				h1.pink.chasing-embers Ingredientes
+				ul
+					li.chinese(ng-repeat="ing in ingredientesSeleccionados" ng-class="{'tequila': ing.isTequila}")
+						img(ng-show="ing.isTequila" ng-src="../images/redescubre-video/ingredientes/{{ing.img}}.png") 
+						{{ing.name}}
+				a.mix-btn(ng-show="tragoReady == true" ng-click="showFinalStep()" ng-class="{'disabled': canMix == false}")
+			.final-splash-img
+				.col.col-sm-6.col-md-6.col-lg-6
+					img.title( ng-show="showSplash" ng-src="../images/redescubre-video/tu_tequila_es.png")
+					img.trago-title(ng-show="showSplash" ng-src="../images/redescubre-video/titular-{{currentTrago}}.png")
+				.col.col-sm-6.col-md-6.col-lg-6
+					.row
+						img.original.clickable( ng-show="showEndTitles" ng-src="../images/redescubre-video/ver_video.png" ng-click="playPreparation()")
+					.row
+						img.share(ng-show="showEndTitles" ng-src="../images/redescubre-video/compartir-title.png")
+					.row
+						img.fb.clickable(ng-show="showEndTitles" ng-click="postTo(1)" ng-src="../images/redescubre-video/compartir-fb.png")
+						img.tw.clickable(ng-show="showEndTitles" ng-click="postTo(2)" ng-src="../images/redescubre-video/compartir-tw.png")
+						img.another.clickable( ng-show="showEndTitles" ng-src="../images/redescubre-video/otro_trago.png" ng-click="reset()")
+		.row
+			img.speaker(src="../images/sound-on.png" ng-click="toggleSound()" ng-show="soundPlaying")
+			img.speaker(src="../images/sound-off.png" ng-click="toggleSound()" ng-hide="soundPlaying")
+			img.ing-splash(ng-src="../images/redescubre-video/splash/{{currentIngrediente.slug}}.png" ng-show="showIngredienteSplash")
+		.row.wood
+			.container
+				img.selecciona(src="../images/redescubre-video/selecciona.png")
+				ul.list-inline.ingredientes
+					li(ng-repeat="ingrediente in ingredientes | limitTo:6" ng-class="{'disabled': ingrediente.disabled || canChoose == false}" )
+						img(ng-src="{{getIngredienteImg(ingrediente)}}" ng-click="selectIngrediente(ingrediente)")
+						a.chinese( ng-click="selectIngrediente(ingrediente)") {{ingrediente.name}}
+				ul.list-inline.ingredientes
+					li(ng-repeat="ingrediente in ingredientes | limitTo:12:6" ng-class="{'disabled': ingrediente.disabled || canChoose == false}" )
+						img(ng-src="images/redescubre-video/ingredientes/{{ingrediente.slug}}.png" ng-click="selectIngrediente(ingrediente)")
+						a.chinese( ng-click="selectIngrediente(ingrediente)") {{ingrediente.name}}
+	.row
+		script(type="text/ng-template", id="preparationVideo")
+			include ./preparation-video

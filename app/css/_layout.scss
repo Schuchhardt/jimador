@@ -1,0 +1,185 @@
+#layout{
+    background-color: $black;
+    height: 100%;
+    width: 100%;
+    .navbar{
+        text-align: center;
+        top: 110px;
+        font-family: "Chinese Rocks";
+        letter-spacing: 1px;
+        ul{
+            float: none;
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+            li{
+                &.active{
+                    a{
+                        font-size: 20px;
+                        color: $pink-red;
+                        &:hover{
+                            color: $pink-red;
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+            }
+            a{
+                font-size: 17px;
+                transform: rotate(-3deg);
+                color: $white;
+                &:hover{
+                    color: $pink-red;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .header-bar{
+        position: absolute;
+    }
+    @media (max-width: $iphone6-plus) { 
+        .header-bar{
+            width: 430px;
+            height: 70px;
+            background-color: $header-bar;
+            position: fixed;
+            z-index: 10;
+            top: 0px;
+        }
+        .redescubre-logo{
+            width: 80px;
+            left: 30px;
+        }
+        .navbar {
+            position: fixed;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            background-color: $header-bar;
+            width: 100%;
+            z-index: 10;
+            top: 60px;
+            div{
+                padding: 0px;
+            }
+            ul{
+                width: 420px;
+                float: left;
+                li{
+                    border: 1px solid $black;
+                }
+            }
+
+        }
+
+    }
+    @media (max-width: $iphone6) { 
+        .header-bar{
+            width: 400px;
+        }
+        .navbar ul{
+            width: 380px;
+        }
+    }
+    @media (max-width: $iphone) { 
+        .header-bar{
+            width: 350px;
+        }
+        .navbar ul{
+            width: 330px;
+        }
+    }
+}
+p a{
+    color: lighten($pink-red, 20%);
+    font-weight: bolder;
+    font-size: 115%;
+}
+
+.margin-0{
+    margin: 0px
+}
+
+.menu-logo{
+    position: absolute;
+    background-image: url("../images/menu_logo.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    top: 20px;
+    right: 30px;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    z-index: 20;
+    outline: 0px;
+}
+
+.container-content{
+    margin-top: 160px;
+    @media (max-width: $iphone6-plus) { margin-top: 80px; }
+
+}
+
+.footer-legal-xs{
+    font-size: 80%;
+    position: relative;
+}
+
+.footer-legal-sm{
+    display: none;
+    @media (min-width: $tablet){
+        font-size: 80%;
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        padding: 0px 50px;
+        width: 100%;
+    }
+}
+
+.footer {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 550px;
+    display: block;
+    background: $black url("../images/footer.png") no-repeat center bottom;
+    background-size: contain;
+    clear: both;
+    @media (max-width: $iphone6-plus){
+        background: $black url("../images/footer_xs.png") no-repeat center bottom;
+        background-size: contain;
+        height: 360px;
+    }
+    @media (max-width: $tablet){
+        height: 320px;
+        padding-top: 320px;
+        margin-top: 70px;
+    }
+    @media(min-width: $screen-13){
+        height: 1000px;
+    }
+    @media(min-width: $xl-screen){
+        height: 1300px;
+    }
+    @media(min-width: 3200px){
+        height: 1560px;
+    }
+    &.home-video-page{
+        @media(min-width: $lg-screen){
+            margin-top: 45%;
+        }
+        @media(min-width: $screen-13){
+            margin-top: 200px;
+        }
+        @media(min-width: $xl-screen){
+            margin-top: 10%;
+        }
+        @media(min-width: 2000px){
+            margin-top: 20%;
+        }
+    }
+}

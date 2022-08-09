@@ -1,0 +1,27 @@
+#historia{
+	color: $white;
+	font-family: 'ChasingEmbers';
+	.title{
+		h1{
+			font-size: 130px;
+			text-align: center;
+			position: relative;
+			bottom: 30px;
+		}
+		h2{
+			font-size: 70px;
+			text-align: center;	
+		}
+		.pink{
+			color: $pink-red;
+		}
+	}
+	img{
+		width: 100%;
+		&.master{
+			width: 120%;
+    		right: 24px;
+    		position: relative;
+		}
+	}
+}

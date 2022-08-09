@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'ChasingEmbers';
+    src: url('../fonts/Chasing_Embers.ttf') format('truetype'),
+        url('../fonts/Chasing_Embers.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+// @font-face {font-family: "Chinese Rocks";
+//     src: url("../fonts/ChineseRocks.eot"); /* IE9*/
+//     src: url("../fonts/ChineseRocks.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+//     url("../fonts/ChineseRocks.woff") format("woff"), /* chrome firefox */
+//     url("../fonts/ChineseRocks.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+//     url("../fonts/ChineseRocks.svg#Chinese Rocks") format("svg"); /* iOS 4.1- */
+// }
+@font-face {font-family: "Chinese Rocks";
+    src: url("http://redescubreeltequila.cl/fonts/ChineseRocks.eot"); /* IE9*/
+    src: url("http://redescubreeltequila.cl/fonts/ChineseRocks.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://redescubreeltequila.cl/fonts/ChineseRocks.woff") format("woff"), /* chrome firefox */
+    url("http://redescubreeltequila.cl/fonts/ChineseRocks.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://redescubreeltequila.cl/fonts/ChineseRocks.svg#Chinese Rocks") format("svg"); /* iOS 4.1- */
+}
+
+
+@font-face {
+    font-family: 'novecento_sans_widedemibold';
+    src: url('../fonts/Novecentosanswide-DemiBold-webfont.eot');
+    src: url('../fonts/Novecentosanswide-DemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Novecentosanswide-DemiBold-webfont.woff') format('woff'),
+         url('../fonts/Novecentosanswide-DemiBold-webfont.ttf') format('truetype'),
+         url('../fonts/Novecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'novecento_sans_widelight';
+    src: url('../fonts/Novecentosanswide-Light-webfont.eot');
+    src: url('../fonts/Novecentosanswide-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Novecentosanswide-Light-webfont.woff') format('woff'),
+         url('../fonts/Novecentosanswide-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Novecentosanswide-Light-webfont.svg#novecento_sans_widelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+

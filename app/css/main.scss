@@ -1,0 +1,282 @@
+// SCSS
+$drink: #2C2720;
+$black: #000;
+$white: #FFF;
+$dark: #2E2D28;
+$pink-red: #DE0653;
+
+$header-bar: #191818;
+
+//Sizes
+$iphone: 320px;
+$iphone6: 375px;
+$iphone6-plus: 414px; //Iphone6Plus
+$tablet: 768px;
+$desktop: 992px;
+$lg-screen: 1200px;
+$screen-13: 1270px;
+$xl-screen: 1540px;
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin transform($transform...) {
+    -moz-transform:    $transform;
+    -o-transform:      $transform;
+    -webkit-transform: $transform;
+    transform:         $transform;
+}
+
+@mixin animation($animation...) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -ms-animation: $animation;
+    animation: $animation;
+}
+
+@import "fonts";
+@import "login";
+@import "layout";
+@import "home";
+@import "redescubre";
+@import "historia";
+@import "eljimador";
+@import "video";
+@import "experiencias";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.ng-invalid.ng-dirty{
+  border-color: $pink-red !important;
+}
+.ng-valid.ng-dirty {
+  border-color: $drink !important;
+}
+
+body{
+    background-color: $black;
+}
+
+
+.white{
+	color: $white;
+}
+
+.bolder{
+    font-weight: bolder;
+}
+
+.logo{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin-top: 50px;
+    img{
+        width: 160px;
+        display: block;
+        margin: auto;
+    }
+    @media(min-width: $iphone){
+        margin-top: 15px;
+        img{
+            position: relative;
+            right: 10px;
+            width: 110px;
+        }
+    }
+    @media(min-width: $tablet){
+        margin-top: 60px;
+        img{
+            width: 130px;
+        }
+    }
+}
+.absolute{
+    position: absolute;
+}
+
+.redescubre-logo{
+    
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 80%;
+
+    @media(min-width: $iphone){
+        background-image: url(../images/redescubre_mov.png);
+        background-position: center;
+        top: 0;
+        left: 0;
+        height: 75px;
+        width: 100px;
+    }
+    @media(min-width: $iphone6-plus){
+        background-image: url(../images/redescubre_mov.png);
+        background-position: center;
+        top: 0;
+        left: 20px;
+        height: 75px;
+    }
+    @media(min-width: $tablet){
+        left: 35px;
+        z-index: 10;
+        top: 30px;
+        height: 128px;
+        width: 140px;
+        background-image: url(../images/redescubre_logo.png); 
+    }
+}
+
+.appear {
+  @include transition(all linear 0.5s);
+  &.ng-hide {
+    opacity:0;
+  }
+}
+
+.appear-left {
+  @include transition(all linear 0.5s);
+  &.ng-hide {
+    left:0;
+  }
+}
+
+
+.chinese{
+    font-family: "Chinese Rocks";
+}
+
+.chasing-embers{
+    font-family: 'ChasingEmbers';
+}
+
+.book{
+    font-family: "novecento_sans_widelight";
+    strong{
+        font-family: "novecento_sans_widedemibold";
+    }
+}
+
+.demibold{
+    font-family: "novecento_sans_widedemibold";
+}
+
+video{
+    width: 100%;
+}
+
+.videogular-container {
+    width: 100%;
+    height: 320px;
+    margin: auto;
+    overflow: hidden;
+    background-color: $black;
+}
+ 
+@media (min-width: 1200px) {
+    .videogular-container {
+        // width: 1170px;
+        height: 658.125px;
+    }
+}
+ 
+@media (min-width: 992px) and (max-width: 1199px) {
+    .videogular-container {
+        // width: 940px;
+        height: 528.75px;
+    }
+}
+ 
+@media (min-width: 768px) and (max-width: 991px) {
+    .videogular-container {
+        // width: 728px;
+        height: 409.5px;
+    }
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.clear-left, .col-birth-date{
+    clear: left;
+}
+
+.p-t-150{
+    padding-top: 150px;
+    @media(max-width: $tablet){
+        padding-top: 80px;
+    }
+}
+
+.padding-10{
+    padding: 10px;
+}
+
+#linking-policy{
+    li, p, h3, label, span{
+        font-family: "novecento_sans_widedemibold";
+        color: $white;
+    }
+    select{
+        color: $black;
+    }
+    .ng-invalid.ng-dirty{
+        border: 2px solid $pink-red !important
+    }
+    .ng-valid.ng-dirty {
+        border: 2px solid #3c763d !important
+    }
+    form div[class^="col-"], form div[class*=" col-"] {
+        margin-bottom: 0.5em; 
+    }
+
+    label{
+        font-size: 1em;
+        clear: both;
+        width: 100%;
+        display: block;
+        &.si{
+            display: inline-block;
+            width: 10%;
+            margin-left: 0%;
+        }
+        &.no{
+            display: inline-block;
+            width: 10%;
+        }
+    }
+
+    button{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    input[type="checkbox"]{
+        width: 50%;
+    }
+    .col-birth-date{
+        height: 60px;
+    }
+    form .col-birth-date input {
+      text-align: center;
+      width: 30%;
+      margin-right: 2%;
+      float: left;
+      clear: none; }
+      &:last-of-type {
+        margin-right: 0; 
+    }
+      @media screen and (min-width: 992px) {
+        form .col-birth-date input label {
+          bottom: -7px; } 
+      }
+}

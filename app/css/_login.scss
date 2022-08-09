@@ -1,0 +1,508 @@
+#Login{
+    background-color: $dark;
+    background-image: url(../images/bg-login.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    min-height: 1000px;
+    background-position: center;
+    @media(max-width: $iphone6-plus){
+        min-height: 720px;
+        background-image: url(../images/bg-login-mov.jpg);
+    }
+    form.ng-dirty{
+        .savior{
+            display: none;
+        }
+    }
+    img.rayo{
+        left: 120px;
+        bottom: 60px;
+    }
+}
+.ui-select-bootstrap>.ui-select-match>.btn {
+    background-color: transparent;
+    color: $pink-red;
+    font-family: 'Chinese Rocks';
+    margin-right: 40px;
+    font-size: 28px;
+    border: 0px transparent;
+}
+
+.ui-select-match{
+    &.btn-default-focus{
+        background-color: transparent;
+        outline: 0px;
+        color: $white;
+    }
+}
+
+.ui-select-bootstrap .ui-select-toggle>.caret {
+    color: $pink-red;
+    margin-top: 1;
+    margin-right: 22px;
+}
+
+.ui-select-search{
+    &.form-control{
+        font-family: "novecento_sans_widedemibold";
+        background-color: transparent;
+        color: $white;
+    }
+}
+
+
+.ui-select-choices-row-inner{
+    span{
+        font-family: "novecento_sans_widedemibold";
+    }
+}
+.ui-select-choices-row.active a{
+    background-color: $black !important;
+    color: $pink-red !important;
+}
+
+.savior{
+    position: absolute;
+    color: $pink-red;
+    font-family: "Chinese Rocks";
+    font-size: 31px;
+    // margin-left: 33px;
+    display: block;
+    right: 79px;
+}
+.fb-link{
+    z-index: 99;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    padding-right: 20px;
+    right: 0px;
+    opacity: 1;
+    @include transition(all linear 0.3s)
+    &:hover{
+        opacity: 0.6;
+    }
+    @media(min-width: $tablet){
+        margin: 35px;
+    }
+}
+
+
+.fb-logo{
+    background-image: url(../images/facebook_white.png);
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 60px;
+    background-size: contain;
+    float: right;
+    position: relative;
+    top: 16px;
+    left: 25px;
+    background-color: transparent;
+}
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: $pink-red;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: $pink-red;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: $pink-red;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $pink-red;
+}
+.right-side{
+
+    .dates{
+        float: right;
+        margin-right: 40px;
+        @media(max-width: $iphone6-plus){
+            height: 40px;
+        }
+        &.native-dp{
+            margin-right: 0px;
+            input[type="date"]{
+                font-family: "Chinese Rocks";
+                text-transform: uppercase;
+                color: $pink-red;
+                background-color: transparent;
+                font-size: 30px;
+                outline-color: $pink-red;
+                text-align: right;
+                border: 0px;
+                &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                    color:   $pink-red;
+                    margin-right: 30px;
+                }
+                &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                   color:   $pink-red;
+                   margin-right: 30px;
+                   opacity:  1;
+                }
+                &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                   color:   $pink-red;
+                   margin-right: 30px;
+                   opacity:  1;
+                }
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                   color:   $pink-red;
+                   margin-right: 30px;
+                }
+                &:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+                  color:   $pink-red;
+                  margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .padding-top{
+        padding-top: 110px;
+        @media (min-width: $iphone){
+            padding-top: 230px;
+        }
+        @media (min-width: $iphone6){
+            padding-top: 250px;
+        }
+        @media (min-width: $iphone6-plus){
+            padding-top: 325px;
+        }
+        @media (min-width: $tablet){
+            padding-top: 380px;
+        }
+        @media (min-width: $desktop){
+            padding-top: 180px;
+        }
+    }
+    p{
+        font-family: 'ChasingEmbers';
+        font-size: 70px;
+        width: 280px;
+        line-height: 62px;
+        position: relative;
+        text-align: right;
+        margin: 0;
+        span{
+            color: $pink-red;
+        }
+        @media (min-width: $iphone){
+            left: 10%;
+            font-size: 45px;
+            line-height: 40px;
+        }
+        @media (min-width: $iphone6){
+            left: 20%;
+            font-size: 60px;
+            line-height: 40px;
+        }
+        @media (min-width: $iphone6-plus){
+            left: 30%;
+        }
+        @media (min-width: $desktop){
+            left: 0;
+            text-align: left;
+            font-size: 75px;
+            line-height: 60px;
+        }
+    }
+    .date-age{
+        font-family: "Chinese Rocks";
+        display: inline-block;
+        width: 70px;
+        margin: 0px 10px;
+        @media (min-width: $iphone){
+            left: 20px;
+            width: 40px
+        }
+        @media (min-width: $iphone6 ){
+            left: 70px;
+            width: 40px
+        }
+        @media (min-width: $iphone6-plus ){
+            left: 54px;
+            width: 55px
+        }
+        input{
+            background-color: transparent;
+            height: 80px;
+            color: $pink-red;
+            font-size: 340%;
+            border: 1px groove transparent;
+            width: 60px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            left: 10px;
+            padding-left: 5px;
+            &::-webkit-input-placeholder{
+                color: $pink-red;
+            }
+            &.year{
+                width: 100px;
+            }
+        }
+        .date-text{
+            color: $white;
+            text-transform: uppercase;
+            display: block;
+            text-align: center;
+            letter-spacing: 1px;
+            position: relative;
+            font-size: 115%;
+            font-weight: 100;
+            bottom: 20px;
+            @media (min-width: $iphone ){
+                left: 30px;
+            }
+        }
+    }
+    .divider{
+        display: inline-block;
+        color: $white;
+        font-size: 50px;
+        position: relative;
+        bottom: 20px;
+        @media (min-width: $iphone ){
+            left: 35px;
+        }
+        @media (min-width: $iphone6 ){
+            left: 90px;
+        }
+        @media (min-width: $iphone6-plus ){
+            left: 70px;
+        }
+    }
+
+    .btn-row{
+        .checkbox{
+            display: inline-block;
+            label{
+                letter-spacing: 1px;
+                font-size: 17px;
+                padding: 0;
+                margin-bottom: 10px;
+                // @media (max-width: $iphone6-plus){
+                //     padding-left: 100px;
+                // }
+                
+            }
+            input{
+                position: relative;
+                left: 15%;
+            }
+            span{
+                display: inline-block;
+                &.small{
+                    font-size: 60%;
+                    font-weight: bolder;
+                    a{
+                        color: $white;
+                        text-decoration: underline;
+                    }
+                }
+                &.info{
+                    font-size: 45%;
+                    font-weight: bolder;
+                }
+                &.disclaimer{
+                    font-size: 55%;
+                    text-align: center;
+                    width: 100%;
+                    position: relative;
+                }
+                &.remind{
+                    position: relative;
+                    left: 18%;
+                }
+            }
+        }
+        @media (max-width: $iphone6-plus){
+            float: right;
+        }
+    }
+
+    .btn-ingresar{
+        display: inline-block;
+        font-family: "Chinese Rocks";
+        color: $pink-red;
+        background-color: $white;
+        border-radius: 4px;
+        margin-left: 30px;
+        letter-spacing: 1px;
+        font-size: large;
+        @media (max-width: $tablet){
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+                width: 150px;
+                display: block;
+        }
+    }
+}
+
+.sweet-alert {
+    background-color: $pink-red;
+    h2, p{
+        font-family: "Chinese Rocks";
+        color: $white;
+    }
+    button{
+        font-family: "Chinese Rocks";
+        background-color: $black !important;
+        color: $white;
+    }
+}
+
+img.rayo{
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    transform: rotate(-33deg);
+}
+
+.trans-msg{
+    @media (max-width: $iphone6-plus){
+        background-color: $black;
+        opacity: 0.6;
+        &.footer-lgl{
+            text-align: center;
+            font-size: 75%;
+            margin-top: 20px;
+        }
+        span.book{
+            text-align: center;
+        }
+    }
+    @media(min-width: $tablet){
+        bottom: 40px;
+        font-size: 90%;
+    }
+    @media(min-width: $lg-screen){
+        margin-top: 30px;
+    }
+}
+
+.remind-user{
+    margin-left: 20%;
+    @media(min-width: $tablet){
+        margin-left: -10%;
+    }
+}
+
+
+.cookie-text{
+    height: 85px;
+    margin-bottom: 40px;
+}
+
+.copyright{
+    width: 130px;
+    position: relative;
+    display: inline-block;
+    top: 30px;
+    font-size: 90%;
+    @media(max-width: $tablet){
+        top: 10px;
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        margin-bottom: 10px !important;
+    }
+    @media(min-width: $screen-13){
+        left: 0px;
+    }
+    @media(min-width: $xl-screen){
+        left: 70px;
+    }
+
+    @media(min-width: 2050px){
+        left: 180px;
+    }
+
+    @media(min-width: 3050px){
+        left: 460px;
+    }
+
+}
+
+.font-90{
+    font-size: 90%;
+}
+
+.font-80{
+    font-size: 80%;
+}
+
+.font-70{
+    font-size: 70%;
+}
+
+.enjoy-phrase{
+    font-size: 120%;
+    font-weight: bolder;
+}
+
+.informate{
+    margin-top: 10px;
+    padding: 0px 2px;
+    span.text-center{
+        margin: 0 10px;
+    }
+    @media(max-width: $tablet){
+        p{
+            text-align: center;
+        }
+    }
+}
+
+#login-footer{
+    position: relative;
+    bottom: 10px;
+}
+
+.country-select{
+    position: relative;
+    top: -10px;
+
+    .select-title{
+        display: block;
+        margin-left: 20px;
+        margin-bottom: -10px;
+    }
+    label{
+        margin-left: 30px;
+    }
+    .select-label{
+        float: left;
+        position: relative;
+        right: 0;
+        display: inline;
+        padding: 5px 0px 5px 0px;
+        font-size: 28px;
+    }
+    .ui-select-container{
+        display: inline-block;
+    }
+    @media(max-width: $tablet){
+        float: right;
+        .select-label{
+            font-size: 18px;
+            padding: 6px 0px;
+        }
+    }
+}
+
+.img-error{
+    position: relative;
+    margin-bottom: 50px;
+}
+

@@ -1,0 +1,65 @@
+extends ./home-layout
+block content
+	#experiencias
+		.container
+			.exps(ng-repeat="experiencia in experiencias")
+				//- MOBILE
+				.row.paragraph-1.hidden-sm.hidden-md.hidden-lg
+					img(ng-src="../images/experiencias/{{experiencia.slug}}/{{experiencia.portadas[0]}}.jpg")
+					.col.col-xs-6
+						h1.date.chinese {{experiencia.fecha.dd}} <span> {{experiencia.fecha.mes}} </span>
+					.col.col-xs-6.text-col
+						h5.white.demibold {{experiencia.nombre}}
+						p.book.white {{experiencia.texto1}}
+				.row.bar.hidden-sm.hidden-md.hidden-lg
+					.col.col-xs-8.pink
+					.col.col-xs-4
+				//- DESKTOP
+				.row.photos-1
+					.col.col-xs-12.col-sm-6.col-md-8.text-col.zero(ng-if="!$odd")
+						img(ng-src="../images/experiencias/{{experiencia.slug}}/{{experiencia.portadas[2]}}.jpg")
+						img(ng-hide="experiencia.hasVideo" ng-src="../images/experiencias/{{experiencia.slug}}/{{experiencia.portadas[3]}}.jpg")
+						.inline-video.videogular-container(ng-show="experiencia.hasVideo")
+							videogular( vg-theme="experiencia.video.theme.url" vg-player-ready="onPlayerReady($API)")
+								vg-media(vg-src="experiencia.video.sources")
+								vg-controls
+									vg-play-pause-button
+									vg-scrub-bar
+										vg-scrub-bar-current-time
+									vg-time-display {{ timeLeft | date:'mm:ss' }}
+									vg-volume
+										vg-mute-button
+										vg-volume-bar
+									vg-fullscreen-button
+								vg-buffering
+					.col.col-sm-6.col-md-4.hidden-xs.title.black.text-center
+						h2.chasing-embers.white {{experiencia.titulo1}}
+						h1.chasing-embers.pink {{experiencia.titulo2}}
+						.block
+							p.white.book {{experiencia.texto2}}
+							h5.date.chinese {{experiencia.fecha.dd}} <span> {{experiencia.fecha.mes}} </span>
+					.col.col-xs-12.col-sm-6.col-md-8.text-col.zero(ng-if="$odd")
+						img(ng-src="../images/experiencias/{{experiencia.slug}}/{{experiencia.portadas[2]}}.jpg")
+						img(ng-hide="experiencia.hasVideo" ng-src="../images/experiencias/{{experiencia.slug}}/{{experiencia.portadas[3]}}.jpg")
+						.inline-video.videogular-container(ng-show="experiencia.hasVideo")
+							videogular( vg-theme="experiencia.video.theme.url" vg-player-ready="onPlayerReady($API)")
+								vg-media(vg-src="experiencia.video.sources")
+								vg-controls
+									vg-play-pause-button
+									vg-scrub-bar
+										vg-scrub-bar-current-time
+									vg-time-display {{ timeLeft | date:'mm:ss' }}
+									vg-volume
+										vg-mute-button
+										vg-volume-bar
+									vg-fullscreen-button
+								vg-buffering
+		#gallery.row
+			ul.list-inline
+				li(ng-repeat="img in selectedImagenes")
+					.bg-img(ng-style="getBgImg(img)" ng-click="showSlider(img)")
+			.more-ph(ng-hide="noMore")
+				p.text-center.clickable.pink.chinese(ng-click="loadMore()") Ver más
+	.row
+		script(type="text/ng-template", id="sliderPhotos")
+			include ./slider-photos
